@@ -1,0 +1,83 @@
+<html>
+<head id="trackme">Track me!
+        <script language="javascript" type="text/javascript">
+                function myscript(){
+                    
+                    _date = document.getElementById("date").value;
+                    _swimgym = document.getElementById("swimgym").value;
+                    _set = document.getElementById("set").value;
+                    _sleep = document.getElementById("sleep").value;
+                    _meal = document.getElementById("meal").value;
+                    window.alert(_date + " " + _set + " " + " " +_swimgym + " " + _sleep + " " + _meal);
+                }
+
+                function myscript2(){
+                    var checks = document.getElementsByClassName("checks");
+                    var result = "";
+                    //window.alert("length " + checks.length);
+                    //window.alert("value " + checks[2].value);
+                    //window.alert("checked " + checks[2].checked);
+                    for(i = 0; i < checks.length;i++){
+                        if(checks[i].checked == true){
+                            result +=checks[i].value + " ";
+                        }
+                    }
+                    window.alert(result);
+                }
+                
+            </script>
+</head>
+<body>
+    <table>
+            <form target="_blank" method="POST" action="/action.php">
+        <tr>
+            <td>date</td>
+            <td><input type="date" name="date" id="date"> </td>
+        </tr>
+        <tr>
+            <td>gym or swim</td>
+                <td>
+                    <select id="swimgym">
+                        <option value="swim">swim</option>
+                        <option value="gym">gym</option>
+                    </select>
+                </td>
+        </tr>
+        <tr>
+            <td>set</td>
+                <td>
+                    <textarea name="set" id="set" cols="30" rows="10">genre</textarea>
+                </td>
+        </tr>
+        <tr>
+            <td>note:</td>
+            <td>
+                <input type="checkbox" name="note" id="note" class="checks" value="1">1<br>
+                <input type="checkbox" name="note" id="note" class="checks" value="2">2<br>
+                <input type="checkbox" name="note" id="note" class="checks" value="3" checked>3<br>
+                <input type="checkbox" name="note" id="note" class="checks" value="4">4<br>
+                <input type="checkbox" name="note" id="note" class="checks" value="5">5<br>
+            </td>
+        </tr>
+        <tr>
+            <td>sleep:</td>
+            <td>
+                <input type="text" name="sleep" id="sleep">
+            </td>
+        </tr>
+        <tr>
+            <td>meal:</td>
+            <td>
+                <input type="text" name="meal" id="meal">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="go" onclick="myscript2()"></td>
+        </tr>
+            </form>
+    </table>
+</body>
+
+</html>
+    
